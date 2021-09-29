@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppRouter } from './routers/AppRouter';
+import { Root } from './Root';
 
 import './styles/style.css'
 
 ReactDOM.render(
-  <AppRouter/>,
+  <Root/>,
   document.getElementById('root')
 );
 

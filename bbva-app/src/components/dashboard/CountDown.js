@@ -3,7 +3,7 @@ import React from 'react'
 export const CountDown = () => {
 	return (
 		
-			<div class="countdown">
+			<div className="countdown">
 				<ul>
 					<li><span id="days">00</span> Days</li>
 					<li><span id="hours">00</span> Hours</li>

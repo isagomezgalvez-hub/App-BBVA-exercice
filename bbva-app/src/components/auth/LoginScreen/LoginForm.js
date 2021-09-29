@@ -16,7 +16,7 @@ export const LoginForm = () => {
 				</div>
 				
 	
-					<button type="submit" class="btn-primary btn-lg">Log In</button>
+					<button type="submit" className="btn-primary btn-lg">Log In</button>
 				
 			
 				<div className="register-link">
