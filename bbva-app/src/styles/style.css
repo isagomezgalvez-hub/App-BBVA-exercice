@@ -1,0 +1,6 @@
+@import './base.css';
+
+
+@import '../components/auth/LoginScreen/login.css';
+@import '../components/dashboard/dashboard.css'
+
