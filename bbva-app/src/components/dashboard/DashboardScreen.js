@@ -1,8 +1,19 @@
 import React from 'react'
-import { Logout } from '../auth/Logout/Logout'
-import { CountDown } from './CountDown'
+import { useDispatch } from 'react-redux';
+
+
+import { CountDown } from './CountDown';
+import { startLogout } from '../../actions/auth';
 
 export const DashboardScreen = () => {
+	const dispatch = useDispatch()
+
+
+	const handleLogout = ()=>{
+		dispatch(startLogout())
+	}
+
+
 	return (
 		
 		<div className="dashboard__main">
@@ -13,7 +24,11 @@ export const DashboardScreen = () => {
 						<CountDown/>
 					</div>
 
-					<Logout/>
+					<button 
+						className="btn-primary"
+						onClick={handleLogout}
+						>
+							Logout</button>
 			</div>
 		</div>
 		

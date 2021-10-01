@@ -1,7 +1,9 @@
+import Swal from 'sweetalert2';
 
 import { firebase } from '../api/firebase-config';
 import{ types} from '../types/types'
 import { startLoading, finishLoading } from './ui';
+
 
 export const startLogin = (email,password)=>{
 	return (dispatch)=>{
@@ -42,3 +44,18 @@ export const authLogin = (uid, displayName) => ({
 		displayName
 	}
 });
+
+
+export const startLogout = () => {
+		return async (dispatch) =>{
+			await firebase.auth().signOut()
+			dispatch(logout())
+		}
+		
+};
+
+export const logout = () => ({
+		type: types.authLogout
+})
+
+
