@@ -1,6 +1,10 @@
 import React from 'react'
+import { firebase } from '../../api/firebase-config';
 
 export const CountDown = () => {
+	let lastLogin = firebase.auth().currentUser?.metadata.lastSignInTime;
+	
+	console.log('Ultimo Login', lastLogin)
 	return (
 		
 			<div className="countdown">
@@ -13,5 +17,5 @@ export const CountDown = () => {
 				<p id="newUser"></p>
 			</div>
 	
-	)
+	) 
 }
