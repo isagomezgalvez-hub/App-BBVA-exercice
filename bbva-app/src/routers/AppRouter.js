@@ -11,6 +11,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 import { DashboardScreen } from '../components/dashboard/DashboardScreen';
 import { authLogin } from '../actions/auth';
+import { Spinner } from '../components/shared/loading/spinner';
 
 
 
@@ -35,7 +36,7 @@ export const AppRouter = () => {
 
 	if(checking){
 		return(
-			<h1>Loading</h1>
+			<h1><Spinner/></h1>
 		)
 	}
 

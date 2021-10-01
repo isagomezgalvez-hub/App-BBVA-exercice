@@ -50,7 +50,9 @@ export const LoginScreen = () => {
 		<div>
 				 <form onSubmit={ handleLogin }>
 					<div className="auth__icon">
-						<i className="fas fa-lock"></i>
+                    <span class="material-icons-outlined md-36">
+                        lock
+                    </span>
 					</div>
                 <input 
                     type="text"
@@ -82,7 +84,7 @@ export const LoginScreen = () => {
 
 
 				<div className="register-link">
-					<Link to="/auth/register" className="link">Registar</Link> 
+					<Link to="/auth/register" className="link">Register</Link> 
 				</div>
 
                 {msgError &&

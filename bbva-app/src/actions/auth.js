@@ -14,8 +14,9 @@ export const startLogin = (email,password)=>{
 				dispatch(authLogin(user.uid, user.displayName))
 				dispatch(finishLoading())
 			}).catch((error)=>{
-				console.log(error)
+				console.error(error)
 				dispatch(finishLoading())
+				Swal.fire('Error', error.message, 'error');
 			})
 	}
 }
@@ -31,6 +32,7 @@ export const startRegister = (email, password, name) => {
 			)
 		}).catch((error)=>{
 			console.error(error)
+			Swal.fire('Error', error.message, 'error');
 		})
 	}
 }

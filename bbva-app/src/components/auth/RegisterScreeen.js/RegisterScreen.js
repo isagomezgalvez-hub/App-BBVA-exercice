@@ -52,7 +52,9 @@ export const RegisterScreen = () => {
 
 				 <form onSubmit={ handleRegister }>
 						 <div className="auth__icon">
-							<i className="fas fa-user"></i>
+					<span class="material-icons-outlined md-36">
+								person
+							</span>
 						</div>
                 <input 
                     type="text"
@@ -101,7 +103,7 @@ export const RegisterScreen = () => {
                 </button>
 
                
-				<div className="">
+				<div className="register-link">
 					<Link 
 						to="/auth/login"
 						className="link"

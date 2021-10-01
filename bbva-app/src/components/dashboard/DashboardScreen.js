@@ -19,7 +19,7 @@ export const DashboardScreen = () => {
 		<div className="dashboard__main">
 			<div className="dashboard__box-container">
 				<h1 className="dashboard-title ">Welcome!</h1>
-					<p className="dashboard__description">Lorem Ipsum dolor amet</p>
+					<p className="dashboard__description">The last time you accessed was</p>
 					<div>
 						<CountDown/>
 					</div>
