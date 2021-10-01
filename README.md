@@ -19,7 +19,7 @@ El proyecto contiene las siguientes librerias:
 
 
 ## Backend
-Para rodar esta aplicación obteniendo datos de un back-end se ha utilizado servicio de Firebase.
+Como backend de esta aplicación se ha utilizado el servicio de Firebase.
 
 ## Arrancar la aplicación
 Para arrancar la aplicación
