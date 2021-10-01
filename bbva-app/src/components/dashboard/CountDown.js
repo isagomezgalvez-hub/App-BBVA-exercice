@@ -1,13 +1,8 @@
-import React, {useEffect, useState}from 'react'
-import { firebase } from '../../api/firebase-config';
+import React from 'react'
 
-let accessDate = firebase.auth().currentUser?.metadata.lastSignInTime
-const countDown = new Date(accessDate).getTime();
 
 export const CountDown = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
 
-	
-	
 	return (
 			<div className="countdown">
 			<ul>

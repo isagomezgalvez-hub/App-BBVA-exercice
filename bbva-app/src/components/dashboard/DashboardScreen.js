@@ -18,10 +18,6 @@ export const DashboardScreen = () => {
 	let loginAccessDate = firebase.auth().currentUser?.metadata.lastSignInTime
 	let countDownLogin = new Date(loginAccessDate).getTime();
 
-	const handleLogout = ()=>{
-		dispatch(startLogout())
-	}
-
 
 	let interval;
 
@@ -61,6 +57,11 @@ export const DashboardScreen = () => {
 	useEffect(() => {
 		startTimer()
 	}, [])
+
+	const handleLogout = () => {
+		dispatch(startLogout())
+	}
+
 
 	return (
 		
