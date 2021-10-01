@@ -1,13 +1,20 @@
 
 import { firebase } from '../api/firebase-config';
 import{ types} from '../types/types'
+import { startLoading, finishLoading } from './ui';
 
 export const startLogin = (email,password)=>{
 	return (dispatch)=>{
-		setTimeout(()=>{
-			dispatch( authLogin('Hola',123) )
+		dispatch(startLoading())
 
-		},3000);
+		firebase.auth().signInWithEmailAndPassword(email, password)
+			.then(({ user }) => {
+				dispatch(authLogin(user.uid, user.displayName))
+				dispatch(finishLoading())
+			}).catch((error)=>{
+				console.log(error)
+				dispatch(finishLoading())
+			})
 	}
 }
 
